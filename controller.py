@@ -3,17 +3,11 @@
 import time
 
 
-#def warning_1(meeting_duration):
-#    if 
-#    return '1 minute left'
-
-
 def game_loop(meeting_name,meeting_duration):
     # FIXME Check for the following conditions:
     #       - `meeting_duration` >= 1
     #       - `meeting_name`
-    if isinstance(meeting_duration,'int'):
-        
+    if isinstance(meeting_name,str) and isinstance(meeting_duration,int):
 	    counter = 0
 	    while True:
 	        time.sleep(1)
@@ -26,13 +20,10 @@ def game_loop(meeting_name,meeting_duration):
 	            return 'times up'
 	        elif counter == (meeting_duration-60): # max - 60
 	            counter += 1
-
 	            print('1 minute left')
-
-	        elif counter == (meeting_duration//2): # max - 60
+	        elif counter == (meeting_duration//2): # max / 2
 	            print('halftime')
 	            counter += 1
-	            
 	        else:
 	            counter += 1
 
